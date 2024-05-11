@@ -31,9 +31,7 @@ fun ListItemPreview(){
 
 @Composable
 fun ListItem(singleListItemString: String) {
-    var checkedBox by remember {
-        mutableStateOf(false)
-    }
+    val checkedBox = false;
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -43,7 +41,7 @@ fun ListItem(singleListItemString: String) {
             )
             .padding(16.dp)
             .clickable {
-                checkedBox = !checkedBox
+                /*Todo*/
             }
     ) {
         Text(
@@ -57,9 +55,7 @@ fun ListItem(singleListItemString: String) {
 
         Checkbox(
             checked = checkedBox,
-            onCheckedChange = { isChecked ->
-                checkedBox = isChecked
-            }
+            onCheckedChange = { isChecked -> /*Todo*/ }
         )
     }
 }
