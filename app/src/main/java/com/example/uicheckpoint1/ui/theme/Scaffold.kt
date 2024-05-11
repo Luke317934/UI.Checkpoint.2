@@ -34,7 +34,11 @@ fun ScaffoldLayoutPreview() {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ScaffoldLayout(screenHeading: String, content: @Composable () -> Unit, screenBottomBar: @Composable () -> Unit) {
+fun ScaffoldLayout(
+    screenHeading: String,
+    content: @Composable () -> Unit,
+    screenBottomBar: @Composable () -> Unit
+) {
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
@@ -47,7 +51,7 @@ fun ScaffoldLayout(screenHeading: String, content: @Composable () -> Unit, scree
             )
         },
 
-        content = {values ->
+        content = { values ->
             Column(Modifier.padding(values)) {
                 content()
             }
@@ -63,10 +67,11 @@ fun ScaffoldLayout(screenHeading: String, content: @Composable () -> Unit, scree
         },
 
         floatingActionButton = {
-            FloatingActionButton(onClick = {/* TODO -> Navigation */},
+            FloatingActionButton(
+                onClick = {/* TODO -> Navigation */ },
                 //containerColor = MaterialTheme.colorScheme.tertiary
                 //shape = MaterialTheme.shapes.small
-                ){
+            ) {
                 Icon(
                     Icons.Default.Favorite,
                     contentDescription = "Add",

@@ -18,7 +18,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
 
-            val exampleItems = List(12) { index -> "Eintrag ${index + 1}" }
+            val exampleItems = List(100) { index -> "Eintrag ${index + 1}" }
 
             UICheckpoint1Theme {
                 Surface(//not as important for this project

@@ -2,11 +2,10 @@ package com.example.uicheckpoint1
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.MaterialTheme
@@ -26,32 +25,19 @@ fun ListItemPreview(){
 }
 
 @Composable
-fun ListItem(singleListItemString: String) {
-    val checkedBox = false
+fun ListItem(title: String) {
+    val checkBox = false
     Row(
         modifier = Modifier
             .fillMaxWidth()
             .background(
-                MaterialTheme.colorScheme.background,
-                shape = RoundedCornerShape(16.dp)
+                MaterialTheme.colorScheme.background, shape = RoundedCornerShape(16.dp)
             )
             .padding(16.dp)
-            .clickable {
-                /*Todo*/
-            }
+            .clickable { /*Todoo*/ },
+        Arrangement.SpaceBetween, Alignment.CenterVertically
     ) {
-        Text(
-            text = singleListItemString,
-            modifier = Modifier
-                .align(Alignment.CenterVertically)
-                .weight(1f)
-        )
-
-        Spacer(modifier = Modifier.width(6.dp))
-
-        Checkbox(
-            checked = checkedBox,
-            onCheckedChange = { isChecked -> /*Todo*/ }
-        )
+        Text(title)
+        Checkbox(checked = checkBox, onCheckedChange = { isChecked -> /*TOdo*/ })
     }
 }
