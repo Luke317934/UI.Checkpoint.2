@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "UI.Checkpoint.1"
+rootProject.name = "UI.Checkpoint.2"
 include(":app")
  
